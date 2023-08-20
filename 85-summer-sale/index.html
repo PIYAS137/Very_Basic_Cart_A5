@@ -71,7 +71,8 @@
                                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 </div>
                                 <p class="text-xl font-semibold py-1" id="Card-1-ProductName">K. Accessories</p>
-                                <p class="text-xl font-medium text-gray-500 mb-1"><span id="Card-1-ProductPrice">39.00</span> TK</p>
+                                <p class="text-xl font-medium text-gray-500 mb-1"><span
+                                        id="Card-1-ProductPrice">39.00</span> TK</p>
                             </div>
                         </div>
                         <!-- card 1 -->
@@ -90,7 +91,8 @@
                                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 </div>
                                 <p class="text-xl font-semibold py-1" id="Card-2-ProductName">K. Accessories</p>
-                                <p class="text-xl font-medium text-gray-500 mb-1"><span id="Card-2-ProductPrice">25.00</span> TK</p>
+                                <p class="text-xl font-medium text-gray-500 mb-1"><span
+                                        id="Card-2-ProductPrice">25.00</span> TK</p>
                             </div>
                         </div>
                         <!-- card 2 -->
@@ -109,7 +111,8 @@
                                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 </div>
                                 <p class="text-xl font-semibold py-1" id="Card-3-ProductName">Home Cooker</p>
-                                <p class="text-xl font-medium text-gray-500 mb-1"><span id="Card-3-ProductPrice">49.00</span> TK</p>
+                                <p class="text-xl font-medium text-gray-500 mb-1"><span
+                                        id="Card-3-ProductPrice">49.00</span> TK</p>
                             </div>
                         </div>
                         <!-- card 3 -->
@@ -119,10 +122,11 @@
                 <div class="w-1/4  rounded-lg">
                     <div class="bg-white rounded-lg p-6 shadow-sm">
                         <h1 class="text-2xl font-semibold mb-4">Have coupon?</h1>
-                        <div id="buttonBgDiv" class="bg-gray-400 broder1 rounded-xl overflow-hidden flex items-center border border-gray-300 mb-1">
+                        <div id="buttonBgDiv"
+                            class="bg-gray-400 broder1 rounded-xl overflow-hidden flex items-center border border-gray-300 mb-1">
                             <input id="couponInput" class="outline-none py-3 px-2" type="text" id="">
                             <div class="flex justify-center w-full">
-                                <button  id="applyBTN" class="cursor-auto font-bold text-xl text-white">Apply</button>
+                                <button id="applyBTN" class="cursor-auto font-bold text-xl text-white">Apply</button>
                             </div>
                         </div>
                     </div>
@@ -130,11 +134,28 @@
                         <ul id="productNameInCart" class="pl-0 block space-y-2">
                         </ul>
                         <hr class="py-2">
-                        <p class="font-medium">Total Price: <span class="text-gray-500"><span id="finalTotalPrice">00.00</span>TK</span></p>
-                        <p class="font-medium">Discount: <span class="text-gray-500"><span id="finalDiscountElement">00.00</span>TK</span></p>
-                        <p class="font-medium">Total: <span class="text-gray-500"><span id="finalTotal">00.00</span>TK</span></p>
+                        <p class="font-medium">Total Price: <span class="text-gray-500"><span
+                                    id="finalTotalPrice">00.00</span>TK</span></p>
+                        <p class="font-medium">Discount: <span class="text-gray-500"><span
+                                    id="finalDiscountElement">00.00</span>TK</span></p>
+                        <p class="font-medium">Total: <span class="text-gray-500"><span
+                                    id="finalTotal">00.00</span>TK</span></p>
                         <hr class="py-2">
-                        <button  id="makePurchaseBtn" class="cursor-auto bg-gray-400 w-full text-white font-medium py-2 rounded-lg">Make Purchase</button>
+                        <button disabled id="makePurchaseBtn" onclick="my_modal_1.showModal()"
+                            class="cursor-auto bg-gray-400 w-full text-white font-medium py-2 rounded-lg">Make
+                            Purchase</button>
+                        <!-- Open the modal using ID.showModal() method -->
+                        <dialog id="my_modal_1" class="modal">
+                            <form method="dialog" class="modal-box max-w-screen-sm flex flex-col items-center">
+                                <img class="py-8" src="./images/congo.png" alt="">
+                                <h3 class="font-bold text-5xl text-center mb-4">Congratulation!</h3>
+                                <p class="text-xl font-normal text-center py-2">Your Purchase the product</p>
+                                <div class="modal-action flex pb-8">
+                                    <!-- if there is a button in form, it will close the modal -->
+                                    <button id="closeDiv" class="btn buttonPrimaryBG text-white px-10">Close</button>
+                                </div>
+                            </form>
+                        </dialog>
                     </div>
                 </div>
             </div>

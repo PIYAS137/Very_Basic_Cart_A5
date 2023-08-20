@@ -16,18 +16,20 @@ document.getElementById("applyBTN").addEventListener("click",function(){
     var FinalDiscountElement=document.getElementById("finalDiscountElement");
     var FinalTotalPricePreset=getProductPrice("finalTotalPrice");
     var FinalTotalElement=document.getElementById("finalTotal");
-    var FinalDiscout=0;
+    var FinalDiscout=0.00;
     var FinalTotal=FinalTotalPricePreset
     var text = document.getElementById("couponInput").value;
     
     console.log(text)
     if(text == "SELL200"){
-        FinalDiscout=FinalTotalPricePreset*20/100;
+        console.log("INNER")
+        FinalDiscout=(FinalTotalPricePreset*20/100).toFixed(2);
         FinalTotal=FinalTotalPricePreset-FinalDiscout;
     }
     FinalDiscountElement.innerText=FinalDiscout;
     FinalTotalElement.innerText=FinalTotal;
 })
+
 
 
 
@@ -56,16 +58,12 @@ function CartNameCreateAndSet(productName,productPrice) {
         var purchaseButtonElement=document.getElementById("makePurchaseBtn")
         purchaseButtonElement.classList.add("cursor-pointer")
         purchaseButtonElement.classList.add("bg-[#E527B2]")
-        purchaseButtonElement.removeAttribute("disbled")
-    }else{
-        purchaseButtonElement.setAttribute("disbled")
+        purchaseButtonElement.removeAttribute("disabled")
     }
     if(FinalTotalPricePreset>=200){
         document.getElementById("buttonBgDiv").classList.add("bg-[#E527B2]")
         CouponButtonElement.classList.add("cursor-pointer")
-        CouponButtonElement.removeAttribute("disbled",true)
-    }else{
-        CouponButtonElement.setAttribute("disbled",true)
+        CouponButtonElement.removeAttribute("disabled")
     }
 
     FinalTotalPriceElement.innerText=FinalTotalPricePreset;
@@ -75,6 +73,22 @@ function CartNameCreateAndSet(productName,productPrice) {
 
 // --------cart funciton----------//
 
+// ----------refresh code---------//
+document.getElementById("closeDiv").addEventListener("click",function(){
+    document.getElementById("finalTotalPrice").innerText="00.00";
+    document.getElementById("finalDiscountElement").innerText="00.00"
+    document.getElementById("finalTotal").innerText="00.00"
+    document.getElementById("productNameInCart").innerHTML=``
+    document.getElementById("buttonBgDiv").classList.remove("bg-[#E527B2]")
+    document.getElementById("buttonBgDiv").classList.add("bg-gray-400")
+    document.getElementById("makePurchaseBtn").classList.remove("bg-[#E527B2]")
+    document.getElementById("makePurchaseBtn").classList.add("bg-gray-400")
+    document.getElementById("applyBTN").removeAttribute("disabled")
+    document.getElementById("makePurchaseBtn").removeAttribute("disabled")
+    document.getElementById("couponInput").value="";
+
+})
+// ----------refresh code---------//
 
 
 document.getElementById("card1").addEventListener("click", function () {
