@@ -9,9 +9,7 @@ function getProductPrice(productPriceId) {
     var price = parseFloat(priceText);
     return price;
 }
-// ------get ProductNameAndPrice Function--------//
-
-
+// ------get ProductNameAndPrice Function--------/
 document.getElementById("applyBTN").addEventListener("click",function(){
     var FinalDiscountElement=document.getElementById("finalDiscountElement");
     var FinalTotalPricePreset=getProductPrice("finalTotalPrice");
@@ -19,21 +17,14 @@ document.getElementById("applyBTN").addEventListener("click",function(){
     var FinalDiscout=0.00;
     var FinalTotal=FinalTotalPricePreset
     var text = document.getElementById("couponInput").value;
-    
-    console.log(text)
+
     if(text == "SELL200"){
-        console.log("INNER")
         FinalDiscout=(FinalTotalPricePreset*20/100).toFixed(2);
         FinalTotal=FinalTotalPricePreset-FinalDiscout;
     }
     FinalDiscountElement.innerText=FinalDiscout;
     FinalTotalElement.innerText=FinalTotal;
 })
-
-
-
-
-
 // --------cart funciton----------//
 function CartNameCreateAndSet(productName,productPrice) {
     var cartUL = document.getElementById("productNameInCart");
@@ -41,19 +32,14 @@ function CartNameCreateAndSet(productName,productPrice) {
     newElement.innerText =(cartUL.childElementCount+1)+". "+ productName;
     cartUL.appendChild(newElement)
 
-
-
     var FinalTotalPriceElement=document.getElementById("finalTotalPrice");
     var FinalTotalElement=document.getElementById("finalTotal");
     var CouponButtonElement=document.getElementById("applyBTN");
-
 
     var FinalTotalPricePREV=getProductPrice("finalTotalPrice");
     var FinalTotalPricePreset=FinalTotalPricePREV+productPrice;
     var FinalTotal=FinalTotalPricePreset;
     
-
-
     if(FinalTotalPricePreset>0){
         var purchaseButtonElement=document.getElementById("makePurchaseBtn")
         purchaseButtonElement.classList.add("cursor-pointer")
@@ -65,15 +51,12 @@ function CartNameCreateAndSet(productName,productPrice) {
         CouponButtonElement.classList.add("cursor-pointer")
         CouponButtonElement.removeAttribute("disabled")
     }
-
     FinalTotalPriceElement.innerText=FinalTotalPricePreset;
     FinalTotalElement.innerText=FinalTotal;
-
 }
-
 // --------cart funciton----------//
 
-// ----------refresh code---------//
+// ----------------------------refresh code----------------------------//
 document.getElementById("closeDiv").addEventListener("click",function(){
     document.getElementById("finalTotalPrice").innerText="00.00";
     document.getElementById("finalDiscountElement").innerText="00.00"
@@ -86,9 +69,11 @@ document.getElementById("closeDiv").addEventListener("click",function(){
     document.getElementById("applyBTN").removeAttribute("disabled")
     document.getElementById("makePurchaseBtn").removeAttribute("disabled")
     document.getElementById("couponInput").value="";
-
 })
-// ----------refresh code---------//
+// ----------------------------refresh code----------------------------//
+
+
+
 
 
 document.getElementById("card1").addEventListener("click", function () {
@@ -104,5 +89,21 @@ document.getElementById("card2").addEventListener("click", function () {
 document.getElementById("card3").addEventListener("click", function () {
     var productName = getProductName("Card-3-ProductName");
     var productPrice = getProductPrice("Card-3-ProductPrice");
+    CartNameCreateAndSet(productName,productPrice)
+})
+
+document.getElementById("card4").addEventListener("click", function () {
+    var productName = getProductName("Card-4-ProductName");
+    var productPrice = getProductPrice("Card-4-ProductPrice");
+    CartNameCreateAndSet(productName,productPrice)
+})
+document.getElementById("card5").addEventListener("click", function () {
+    var productName = getProductName("Card-5-ProductName");
+    var productPrice = getProductPrice("Card-5-ProductPrice");
+    CartNameCreateAndSet(productName,productPrice)
+})
+document.getElementById("card6").addEventListener("click", function () {
+    var productName = getProductName("Card-6-ProductName");
+    var productPrice = getProductPrice("Card-6-ProductPrice");
     CartNameCreateAndSet(productName,productPrice)
 })
