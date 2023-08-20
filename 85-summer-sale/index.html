@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>85-summer-sale</title>
+    <!-- tailwind & daisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind & daisyUI CDN -->
+    <!-- google font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@1,600&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Lato:wght@100;400;700;900&family=Noto+Serif+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- google font CDN -->
+    <!-- common little css -->
+    <style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        .buttonPrimaryBG {
+            background: #E527B2;
+        }
+    </style>
+    <!-- common little css -->
+</head>
+
+<body class="">
+
+    <!-- header section start here -->
+    <header class="bg-[#F9F6E2]">
+        <div class="grid grid-cols-2 place-items-center py-[82px] max-w-[1440px] m-auto">
+            <div class="text-center">
+                <p class="text-4xl font-medium mb-11">---SALE FEVER---</p>
+                <h1 class="text-6xl font-bold mb-20">Purchase TK 200 or <br>above & get <span
+                        class="text-[#E527B2]      ">20%
+                        off</span></h1>
+                <p class="text-2xl font-medium">Use Promo Code <button
+                        class="btn btn-lg text-2xl buttonPrimaryBG text-white rounded-xl px-7">SELL200</button></p>
+            </div>
+            <div>
+                <img src="./images/Summer 1.png" alt="">
+            </div>
+        </div>
+    </header>
+    <!-- header section start here -->
+    <!-- main section start  here -->
+    <main class="bg-[#F8F8F8]">
+        <div class="py-32  max-w-[1440px] m-auto">
+            <h1 class="text-[40px] font-semibold mb-5">Kitchenware</h1>
+            <div class="flex gap-6 w-full ">
+                <div class="w-3/4 ">
+                    <!-- card wrapper -->
+                    <div class="grid grid-cols-3 gap-6">
+                        <!-- card 1 -->
+                        <div id="card1" class="shadow-sm bg-white rounded-xl cursor-pointer">
+                            <div class="m-5 bg-slate-100 rounded-xl py-6 flex justify-center items-center">
+                                <img src="./images/prod1.png" alt="">
+                            </div>
+                            <div class="text-center mb-3">
+                                <div class="rating">
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                        checked />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <p class="text-xl font-semibold py-1" id="Card-1-ProductName">K. Accessories</p>
+                                <p class="text-xl font-medium text-gray-500 mb-1"><span id="Card-1-ProductPrice">39.00</span> TK</p>
+                            </div>
+                        </div>
+                        <!-- card 1 -->
+                        <!-- card 2 -->
+                        <div id="card2" class="shadow-sm bg-white rounded-xl cursor-pointer">
+                            <div class="m-5 bg-slate-100 rounded-xl py-6 flex justify-center items-center">
+                                <img src="./images/prod2.png" alt="">
+                            </div>
+                            <div class="text-center mb-3">
+                                <div class="rating">
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                        checked />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <p class="text-xl font-semibold py-1" id="Card-2-ProductName">K. Accessories</p>
+                                <p class="text-xl font-medium text-gray-500 mb-1"><span id="Card-2-ProductPrice">25.00</span> TK</p>
+                            </div>
+                        </div>
+                        <!-- card 2 -->
+                        <!-- card 3 -->
+                        <div id="card3" class="shadow-sm bg-white rounded-xl cursor-pointer">
+                            <div class="m-5 bg-slate-100 rounded-xl py-6 flex justify-center items-center">
+                                <img src="./images/prod3.png" alt="">
+                            </div>
+                            <div class="text-center mb-3">
+                                <div class="rating">
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                        checked />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <p class="text-xl font-semibold py-1" id="Card-3-ProductName">Home Cooker</p>
+                                <p class="text-xl font-medium text-gray-500 mb-1"><span id="Card-3-ProductPrice">49.00</span> TK</p>
+                            </div>
+                        </div>
+                        <!-- card 3 -->
+                        <!-- card wrapper -->
+                    </div>
+                </div>
+                <div class="w-1/4  rounded-lg">
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <h1 class="text-2xl font-semibold mb-4">Have coupon?</h1>
+                        <div id="buttonBgDiv" class="bg-gray-400 broder1 rounded-xl overflow-hidden flex items-center border border-gray-300 mb-1">
+                            <input id="couponInput" class="outline-none py-3 px-2" type="text" id="">
+                            <div class="flex justify-center w-full">
+                                <button  id="applyBTN" class="cursor-auto font-bold text-xl text-white">Apply</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 mt-6 rounded-xl space-y-2 text-2xl font-medium shadow-sm py-8">
+                        <ul id="productNameInCart" class="pl-0 block space-y-2">
+                        </ul>
+                        <hr class="py-2">
+                        <p class="font-medium">Total Price: <span class="text-gray-500"><span id="finalTotalPrice">00.00</span>TK</span></p>
+                        <p class="font-medium">Discount: <span class="text-gray-500"><span id="finalDiscountElement">00.00</span>TK</span></p>
+                        <p class="font-medium">Total: <span class="text-gray-500"><span id="finalTotal">00.00</span>TK</span></p>
+                        <hr class="py-2">
+                        <button  id="makePurchaseBtn" class="cursor-auto bg-gray-400 w-full text-white font-medium py-2 rounded-lg">Make Purchase</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- main section start  here -->
+
+    <!-- js src -->
+    <script src="./script/index.js"></script>
+    <!-- js src -->
+</body>
+
+</html>
